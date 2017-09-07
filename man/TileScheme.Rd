@@ -5,7 +5,7 @@
 \title{Tile Scheme}
 \usage{
 TileScheme(input, dimByCell = NULL, dimByDist = NULL, buffer = 0,
-  bufferspill = FALSE, snap = NULL, removeEmpty = TRUE)
+  bufferspill = FALSE, snap = NULL, removeEmpty = FALSE)
 }
 \arguments{
 \item{input}{filename (character), \link[raster]{extent}, \link[raster]{raster} or a vector of four numbers}
@@ -24,7 +24,7 @@ buffers of the outer tiles are within the extent of \code{input}. If set to \cod
 of the extent of \code{input}}
 
 \item{snap}{optional. Vector of two numbers corresponding to a pair of coordinates to which the tiling scheme will
-be aligned. Can only be used in conjuction with \code{dimByDist}. The coordinates do not need to b within the extent of
+be aligned. Can only be used in conjunction with \code{dimByDist}. The coordinates do not need to b within the extent of
 \code{input}}
 
 \item{removeEmpty}{logical. Default is \code{FALSE}. If set to \code{TRUE}, tiles containing only \code{NA} cell values
@@ -34,7 +34,7 @@ will be removed from the tiling scheme. Can only be used when \code{input} is a 
 The output of this function is a list of three \link[sp]{SpatialPolygonsDataFrame} objects:
   \item{tilePolygons}{The tiling grid. Each polygon corresponds to the extent of a single unbuffered tile.}
   \item{buffPolygons}{The buffered tiling grid. Each polygon corresponds to the extent of a buffered tile. These
-  polygons overlap with neighbouring tiles. If \code{buffer} is set to 0, this output will be identical to \code{tilePolygons}.}
+  polygons overlap with neighboring tiles. If \code{buffer} is set to 0, this output will be identical to \code{tilePolygons}.}
   \item{nbuffPolygons}{Non-overlapping buffered tiles. These polygons remove overlapping buffers for adjacent tiles, but
   preserve buffers for tiles on the edges of the tiling grid. Useful for "reassembling" data that had been originally broken
   into tiles.}
@@ -43,4 +43,13 @@ The output of this function is a list of three \link[sp]{SpatialPolygonsDataFram
 This function aims to provide an all-in-one tool for creating tiling schemes, which includes options for overlapping
 buffers and methods for describing tile sizes in various ways (i.e. using either distance units or cell numbers).
 }
+\examples{
+# Create an irregularly shaped grid defined by the number of raster cells
+ts1 <- TileScheme(CHMdemo, dimByCell = c(100,120))
 
+# Create an square shaped grid defined by unit distance (m)
+ts2 <- TileScheme(CHMdemo, dimByDist = c(50,50))
+
+# Create a grid with buffered cells
+ts3 <- TileScheme(CHMdemo, dimByDist = c(50,50), buffer = 5)
+}
