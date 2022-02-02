@@ -1,11 +1,11 @@
-98be42aa6110d8d148851e92b5670c9e *DESCRIPTION
-e1eda24d120db63cede78f9e8993c0ab *NAMESPACE
+9a87643bb8aa7864669e8092afae9bb8 *DESCRIPTION
+b77b30cbcdf9cd28edaff78adc5dada1 *NAMESPACE
 a040712df1ade66a98cc5f763b3e8d44 *NEWS.md
 9a1d21c8a8e15fba62af09d486c2ff36 *R/CHMdemo.R
 cf145c390a84a1c04df99f7fd452ba97 *R/tileDetector.R
 f6bdf71821d9467686af2a6d3191b3c3 *R/tileSave.R
 1dfc4213b036484740240592522ea3f4 *R/tileScheme-class.R
-e208fd96c987576e1525229b846165ca *R/tileScheme-methods.R
+7f06004b7e5cc69e7745c2f840eea16d *R/tileScheme-methods.R
 e85d5010ee233fc16473ea9dfe903093 *R/tileScheme.R
 a97a455c97363985a7e74fbca5678a7b *R/zzz.R
 0ba453d3a06d4f84d9dd587b5e6111c8 *README.md
@@ -15,7 +15,6 @@ ab07c5ae68d19f35c9777ad70a96d802 *man/figures/demo1-1.png
 3f5eab206a5bd161f3ac28c6e6d64c73 *man/figures/demo2-1.png
 5bd5bac14d97f7e3c73da79f7d3ac0c0 *man/figures/nbuff-sample-1.png
 82570cb05b158d9c34b546d331a99ffb *man/getdata.Rd
-13e86a0dc5709d290ad6f33b3007ec03 *man/identical.Rd
 b592a477a418dd212f92dc53b7fb1605 *man/length-tileScheme-method.Rd
 a3728e7baeedf36b2778e6aa697b3496 *man/plot.Rd
 1b7e0b22c29ceb391b5601b7a4f31156 *man/show-tileScheme-method.Rd
@@ -27,6 +26,4 @@ e360d4f2e6b05da4c97706386cf657f6 *man/tileScheme-class.Rd
 55015d7aa8002bc31844ee198c76e661 *man/tileScheme.Rd
 876d7086d0a35004bf652e243251be3a *tests/testthat.R
 ec218cc8ece57c6b2b6d9b3bab153825 *tests/testthat/test_subset.R
-cac37e325a13fded6861c35132a6284d *tests/testthat/test_tileDetector.R
-f473096690266772f0fd6bd6365650a5 *tests/testthat/test_tileSave.R
-d985311be5ac60a198d9b620acf936ff *tests/testthat/test_tileScheme.R
+1b128a0a83306c27555059026fb60ef1 *tests/testthat/test_tileScheme.R
